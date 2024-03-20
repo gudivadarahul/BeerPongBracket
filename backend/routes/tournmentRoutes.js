@@ -25,7 +25,7 @@ router.delete('/tournaments/:id', (req, res) => {
 });
 
 // Put route to update tournament score
-router.put('/tournmanets/:id', (req, res) => {
+router.put('/tournaments/:id', (req, res) => {
   const { id } = req.params;
   const { teams } = req.body;
   const tournament = tournaments.find(tournament => tournament.id === parseInt(id));

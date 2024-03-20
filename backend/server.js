@@ -2,6 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const tournamentRoutes = require('./routes/tournmentRoutes');
+const testRoutes = require('./routes/testRoutes');
+const teamRoutes = require('./routes/teamRoutes');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
@@ -22,6 +24,8 @@ app.use(bodyParser.json());
 
 // Mount the tournament routes on '/api' path
 app.use('/api', tournamentRoutes);
+app.use('/api', testRoutes);
+app.use('/api', teamRoutes);
 
 // Other middleware and route handling can be added here
 
